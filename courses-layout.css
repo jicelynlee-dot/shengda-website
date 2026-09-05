@@ -1,0 +1,45 @@
+.dm-feature--courses{
+  grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  grid-template-areas:
+    "poster content"
+    "cta content";
+  column-gap:54px;
+  row-gap:16px;
+  align-items:start;
+}
+
+.dm-feature--courses>img{
+  grid-area:poster;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+
+.dm-feature__cta{
+  grid-area:cta;
+  justify-self:start;
+  margin-top:0;
+}
+
+.dm-feature__content{grid-area:content;padding-top:18px}
+.dm-feature__content>h2{margin:8px 0 18px}
+.dm-feature__content>p:not(.eyebrow){color:var(--muted);margin:0 0 20px}
+
+.course-stage{
+  margin-top:38px;
+  padding-top:28px;
+  border-top:1px solid #d8c9a6;
+}
+
+.course-stage h2{font-size:28px;margin:7px 0 8px}
+.course-stage>p:not(.eyebrow){font-size:15px;margin-bottom:18px}
+.course-stage .course-paths{grid-template-columns:1fr;gap:12px}
+.course-stage .path-card{min-height:0;padding:20px 22px}
+.course-stage .path-card h3{font-size:20px;margin:7px 0}
+.course-stage .path-card p{margin-bottom:14px}
+
+@media(max-width:800px){
+  .dm-feature--courses{grid-template-columns:1fr;grid-template-areas:"poster" "cta" "content";gap:28px}
+  .dm-feature__cta{margin-top:0}
+  .dm-feature__content{padding-top:0}
+}
